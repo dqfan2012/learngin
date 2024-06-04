@@ -1,4 +1,4 @@
-FROM golang:latest
+FROM arm64v8/golang:1.22
 
 USER root
 
