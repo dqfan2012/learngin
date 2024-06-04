@@ -6,7 +6,6 @@ import (
 	"github.com/dqfan2012/learngin/internal/routes"
 	"github.com/dqfan2012/learngin/pkg/db"
 
-	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 )
 
@@ -20,9 +19,8 @@ func main() {
 	// Initialize the database
 	db.Init()
 
-	// Initialize the Gin router
-	r := gin.Default()
-	routes.SetupRoutes(r)
+	// Setup the Gin server
+	r := routes.SetupServer()
 
 	// Start the server
 	if err := r.Run(":8080"); err != nil {

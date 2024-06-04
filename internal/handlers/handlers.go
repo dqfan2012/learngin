@@ -25,6 +25,12 @@ type UserResponse struct {
 	EmailVerifiedAt *time.Time `json:"email_verified_at"`
 }
 
+func HomeHandler(c *gin.Context) {
+	c.HTML(http.StatusOK, "home.tmpl", gin.H{
+		"Title": "Home",
+	})
+}
+
 func StatusHandler(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{
 		"status": "ok",
