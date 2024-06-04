@@ -13,7 +13,7 @@ all: server
 
 # Build Docker image for linting and testing
 build-docker:
-	docker build -t $(TEST_IMAGE_NAME) -f build/Dockerfile .
+	docker build -t $(TEST_IMAGE_NAME) -f build/Dockerfile --build-arg GO_VERSION=$(GO_VERSION) .
 
 # Clean any intermediate temp files
 clean:

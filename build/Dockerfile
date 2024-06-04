@@ -1,4 +1,5 @@
-FROM arm64v8/golang:1.22
+ARG GO_VERSION
+FROM golang:$GO_VERSION
 
 USER root
 
