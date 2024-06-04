@@ -3,12 +3,13 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/joho/godotenv"
 	"log"
 	"os"
 	"path/filepath"
 	"strings"
 	"text/template"
+
+	"github.com/joho/godotenv"
 )
 
 const modelTemplate = `package {{ .PackageName }}

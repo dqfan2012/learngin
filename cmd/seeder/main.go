@@ -5,9 +5,10 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/bxcodec/faker/v3"
 	"github.com/dqfan2012/learngin/internal/models"
 	"github.com/dqfan2012/learngin/pkg/db"
+
+	"github.com/bxcodec/faker/v3"
 	"github.com/joho/godotenv"
 )
 

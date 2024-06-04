@@ -1,11 +1,13 @@
 package main
 
 import (
+	"log"
+
 	"github.com/dqfan2012/learngin/internal/routes"
 	"github.com/dqfan2012/learngin/pkg/db"
+
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
-	"log"
 )
 
 func main() {
@@ -23,5 +25,7 @@ func main() {
 	routes.SetupRoutes(r)
 
 	// Start the server
-	r.Run(":8080")
+	if err := r.Run(":8080"); err != nil {
+		log.Fatalf("Failed to run server: %v", err)
+	}
 }
