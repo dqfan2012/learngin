@@ -6,7 +6,7 @@ PKG             := github.com/dqfan2012/$(BIN)
 LOCAL_VERSION   := $(shell git describe --tags --always --dirty)
 TEST_IMAGE_NAME ?= $(BIN)-test:$(LOCAL_VERSION)
 GO_VERSION      := 1.22
-GO_CONTAINER    := arm64v8/golang:$(GO_VERSION)
+GO_CONTAINER    := golang:$(GO_VERSION)
 
 # Default target
 all: server
