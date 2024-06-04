@@ -80,6 +80,14 @@ You can make sure the server is running using the following command:
 curl http://localhost:8080/status
 ```
 
+The response should be:
+
+```bash
+{
+    "status": "ok"
+}
+```
+
 Be sure to pipe into `jq` to pretty print JSON to the console.
 
 **A little more robust**
